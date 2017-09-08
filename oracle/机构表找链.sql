@@ -1,6 +1,7 @@
 1.创建机构表
 select * from tyh_org for update;
 
+<<<<<<< HEAD
 org_id parent_org_id org_name   lst_mt
 0      		     	 总公司     2017/9/8
 1      0	     	 北京		2017/9/8
@@ -22,3 +23,6 @@ org_id parent_org_id org_name   lst_mt
 2      0	     	 上海		2017/9/8
 21     2	     	 上海明珠塔 2017/9/8
 22     2	     	 上海南京路 2017/9/8
+=======
+sdfsdfsfsfsdf
+>>>>>>> ff2712be3df18cd07f1c4dd3d8c76fdc48616bdb
