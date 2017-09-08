@@ -1,16 +1,16 @@
-1.创建机构表
+﻿1.创建机构表
 select * from tyh_org for update;
 
-org_id parent_org_id org_name lst_mt
-0		                 总公司	  2017/9/8
-1	     0	           北京	     2017/9/8
-11	   1	           北京王府井 2017/9/8
-2	     0	           上海	     2017/9/8
-21	   2	           上海明珠塔 2017/9/8
-22	   2	           上海南京路 2017/9/8
-3	     0	           天津	     2017/9/8
-31	   3	           天津津东支 2017/9/8
-32	   3	           天津塘沽支 2017/9/8
+org_id parent_org_id org_name   lst_mt
+0      		     总公司     2017/9/8
+1      0	     北京	2017/9/8
+11     1	     北京王府井 2017/9/8
+2      0	     上海	2017/9/8
+21     2	     上海明珠塔 2017/9/8
+22     2	     上海南京路 2017/9/8
+3      0	     天津	2017/9/8
+31     3	     天津津东支 2017/9/8
+32     3	     天津塘沽支 2017/9/8
 
 2.机构拉平处理
 
@@ -26,7 +26,7 @@ on a.parent_org_id=b.org_id
 where b.parent_org_id is null) r
 on q.org_id2=r.org_id1
 
-org_id1   org_name1 org_id2 org_name2 org_id3 org_name3
+org_id1   	org_name1   org_id2   org_name2     org_id3 org_name3
 0	        总公司	    1	      北京	    11	    北京王府井
 0	        总公司	    2	      上海	    21	    上海明珠塔
 0	        总公司	    3	      天津	    31	    天津津东支
